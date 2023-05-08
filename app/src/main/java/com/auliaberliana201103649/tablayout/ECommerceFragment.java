@@ -1,5 +1,6 @@
 package com.auliaberliana201103649.tablayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -61,11 +62,12 @@ public class ECommerceFragment extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View view inflater.inflate(R.layout.fragment_e_commerce, container, false);
+        View view = inflater.inflate(R.layout.fragment_e_commerce, container, false);
 
         _webView = (WebView) view.findViewById(R.id.eCommerceWebView);
         _webView.loadUrl("https://shopee.co.id");

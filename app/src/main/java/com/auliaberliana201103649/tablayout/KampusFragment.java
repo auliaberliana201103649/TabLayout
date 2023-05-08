@@ -1,5 +1,6 @@
 package com.auliaberliana201103649.tablayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,10 +15,10 @@ import android.webkit.WebViewClient;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BeritaFragment#newInstance} factory method to
+ * Use the {@link KampusFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BeritaFragment extends Fragment {
+public class KampusFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +31,7 @@ public class BeritaFragment extends Fragment {
 
     private WebView _webView;
 
-    public BeritaFragment() {
+    public KampusFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +41,11 @@ public class BeritaFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BeritaFragment.
+     * @return A new instance of fragment KampusFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BeritaFragment newInstance(String param1, String param2) {
-        BeritaFragment fragment = new BeritaFragment();
+    public static KampusFragment newInstance(String param1, String param2) {
+        KampusFragment fragment = new KampusFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,14 +62,15 @@ public class BeritaFragment extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_berita, container, false);
+        View view = inflater.inflate(R.layout.fragment_kampus, container, false);
 
-        _webView = (WebView) view.findViewById(R.id.beritaWebView);
-        _webView.loadUrl("https://www.detik.com");
+        _webView = (WebView) view.findViewById(R.id.kampusWebView);
+        _webView.loadUrl("https://www.stmikpontianak.ac.id");
 
         WebSettings settings = _webView.getSettings();
         settings.setJavaScriptEnabled(true);
